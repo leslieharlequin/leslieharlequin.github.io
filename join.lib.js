@@ -228,6 +228,7 @@ JoinForm.prototype.clearError = function ( fieldName ) {
     if(fieldName){
     $s(fieldName + "_error").className = "";
     $s(fieldName + "_error").firstChild.nodeValue = "";
+    $s(fieldName + "_error").removeAttribute("role");
     }
 }
 
@@ -258,6 +259,7 @@ JoinForm.prototype.validateForm = function () {
     }
     error_count = 0;
     if(hasErrors === false){
+
     	$s("feedback").style.display = "inline-block";
         $s("feedback").firstChild.nodeValue = this.success;
         $s("feedback").className = "feedback";
