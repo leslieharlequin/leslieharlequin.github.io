@@ -34,9 +34,9 @@
 				'id': id
 			});
 
-		$elem.find('li').attr('role','none');
+		$elem.find('li').attr('role','menuitem');
 
-		$elem.find('a').attr('role','menuitem');
+		//$elem.find('a').attr('role','menuitem');
 		
 		$('<div/>') // add div element to be used with aria-described attribute of the menu
 			.text(plugin.options.instructions) // get instruction text from plugin options
